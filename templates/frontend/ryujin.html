@@ -1,0 +1,86 @@
+{% extends 'frontend/base.html' %}
+{% block title %} Member-Ryujin {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
+</style>
+</head>
+<div class="jumbotron">
+    
+    <div class="dropdown">
+        <button class="dropbtn">Select Member</button>
+        <div class="dropdown-content">
+            <a href="{% url 'chaeryeong' %}">Chaeryeong</a> 
+            <a href="{% url 'lia' %}">Lia</a>
+            <a href="{% url 'ryujin' %}">Ryujin </a>
+            <a href="{% url 'yuna' %}">Yuna</a>
+            <a href="{% url 'yeji' %}">Yeji </a>
+        </div>
+        </div>
+        <input type=button onClick= "window.location.href='{% url 'musics' %}'" value='Go To Musics'>
+        <iframe SRC="https://pbs.twimg.com/media/EebYpsRXoAAl9fs.jpg" 
+        align="right", WIDTH="536" HEIGHT="684" frameborder="0" marginheight=0 marginwidth=0 scrolling="no">
+     
+         
+     
+             </iframe>
+         <h1 class="display-3">Ryujin</h1>
+         <p class="lead"></p>
+         <hr class="my-2">
+         <ul>
+
+             <br/><li>Shin Ryujin</li>
+             <br/><li>류진</li>
+             <br/><li> ชิน รยูจิน</li>
+             <br/><li>ชื่อเกาหลี : Shin Ryujin ชิน รยูจิน</li>
+             <br/><li> ชื่อในวงการ : Ryujin รยูจิน</li>
+             <br/><li>  ตำแหน่ง :  แรป, เต้นหลัก, เซ็นเตอร์</li>
+             <br/><li> วันเกิด : 17 เมษายน 2001</li>
+             <br/><li> ส่วนสูง : 164 ซม.</li>
+             <br/><li> สัญชาติ : เกาหลี</li>
+             <br/><li>ระยะเวลาเป็นเด็กฝึก : 4 ปี</li>
+     
+         </ul>
+     </div
+     
+     
+     
+     
+     
+
+{% endblock %}

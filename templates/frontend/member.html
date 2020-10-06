@@ -1,0 +1,63 @@
+{% extends 'frontend/base.html' %}
+{% block title %} Home-Member {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
+</style>
+</head>
+<div class="jumbotron" >
+    <input type=button onClick= "window.location.href='{% url 'musics' %}'" value='Go To Musics'>
+    <h1 class="display-3" ><font color="purple"> Member</font></h1>
+    <p class="lead"></p>
+    <hr class="my-3">
+    
+    <div class="dropdown">
+        <button class="dropbtn">Select Member</button>
+        <div class="dropdown-content">
+            <a href="{% url 'chaeryeong' %}">Chaeryeong</a> 
+            <a href="{% url 'lia' %}">Lia</a>
+            <a href="{% url 'ryujin' %}">Ryujin </a>
+            <a href="{% url 'yuna' %}">Yuna</a>
+            <a href="{% url 'yeji' %}">Yeji </a>
+        </div>
+        </div>
+</div>
+
+</body>
+</html>
+{% endblock %}
